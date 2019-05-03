@@ -99,3 +99,4 @@ class DB extends \PDO{
         return $this->stmt->fetch(\PDO::FETCH_ASSOC);
     }
 }
+

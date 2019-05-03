@@ -9,7 +9,9 @@
     $gdb=DB::getInstance();
    
     // insert data
-    
+    /**
+    * INSERCIÓN DE USUARIOS
+    */
     $sql="INSERT INTO users(username,rol,email,passw) values(:username,:rol,:email,:passw)";
     echo "<h2>".$sql."</h2>";
     $sentencia=$gdb->query($sql);
@@ -21,6 +23,10 @@
     //execute statement
     $res=$gdb->execute();
     // if true, show all users
+
+    /**
+    * SI SE CUMPLE LA SENTENCIA, MOSTRARÁ TODOS LOS USUARIOS
+    */
     if($res){
         $sql="SELECT * FROM users";
         $gdb->query($sql);
